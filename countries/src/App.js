@@ -4,11 +4,13 @@ function App() {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all")
-      .then((response) => response.json())
+    var l;
+    l = fetch("https://restcountries.com//v3.1//all")
+     .then((response) => response.json())
       .then((data) => setCountries(data))
       .catch((error) => console.error("Error fetching data: ", error));
-  }, []);
+      console.log(l,countries);
+  },[]);
 
   const cardStyle = {
     width: "200px",
