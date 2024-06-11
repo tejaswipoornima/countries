@@ -5,7 +5,7 @@ function App() {
 
   useEffect(() => {
     var l;
-    l = fetch("https://restcountries.com//v3.1//all")
+    l = fetch("https://restcountries.com/v3.1/all")
      .then((response) => response.json())
       .then((data) => setCountries(data))
       .catch((error) => console.error("Error fetching data: ", error));
